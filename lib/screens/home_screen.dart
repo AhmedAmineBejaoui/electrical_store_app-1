@@ -4,12 +4,14 @@ import 'package:store_app/constants.dart';
 import 'package:store_app/widgets/home/home_body.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: homeAppBar(),
-      body: HomeBody(),
+      body: const HomeBody(),
     );
   }
 
@@ -17,13 +19,13 @@ class HomeScreen extends StatelessWidget {
     return AppBar(
       elevation: 0,
       title: Text(
-        'مرحبا بكم بمتجر الالكترونيات',
+        'Welcome to the electronics store',
         style: GoogleFonts.getFont('Almarai'),
       ),
       centerTitle: false,
       actions: [
         IconButton(
-          icon: Icon(Icons.menu),
+          icon: const Icon(Icons.menu),
           onPressed: () {},
         ),
       ],
